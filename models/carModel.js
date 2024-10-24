@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const carsSchema = new Schema({
+const carSchema = new Schema({
    year: {
       type: Number,
     },
@@ -56,6 +56,6 @@ const carsSchema = new Schema({
   }
 )
 
-const Car = model('Cars', carsSchema);
+const Car = model('Cars', carSchema);
 
 module.exports = Car;

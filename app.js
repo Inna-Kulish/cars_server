@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const carsRouter = require('./routes/api/cars')
 
-const app = express()
+const app = express() //веб сервер
 
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short'
 
@@ -21,7 +21,7 @@ app.use((req, res) => {
 
 app.use((err, req, res, next) => {
   const {status = 500, message = "Server error"} = err;
-  res.status(status).json({ message, })
+  res.status(status).json({ message })
 })
 
 module.exports = app
